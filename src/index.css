@@ -1,17 +1,21 @@
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-  }
-    
-  .kbd-navigation .square:focus {
-    background: #ddd;
-  }
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
   
-  .app {
-    text-align: center;
-  }
-  
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    /* margin-top: 0; */
-    margin-bottom: 0;
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.App {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  /* margin-top: 0; */
+  margin: 0;
 }
