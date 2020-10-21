@@ -1,80 +1,41 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Alarm from './Alarm';
+import DrawerContainer from './DrawerContainer'; 
 
-// import AppBar from '@material-ui/core/AppBar';
-// import CssBaseline from '@material-ui/core/CssBaseline';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Drawer from '@material-ui/core/Drawer';
 
-// import { makeStyles } from '@material-ui/core/styles';
-
-// import List from '@material-ui/core/List';
-// import Divider from '@material-ui/core/Divider';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from '@material-ui/core/ListItemIcon';
-// import ListItemText from '@material-ui/core/ListItemText';
-// import InboxIcon from '@material-ui/icons/MoveToInbox';
-// import MailIcon from '@material-ui/icons/Mail';
-
-// const drawerWidth = 240;
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     display: 'flex',
-//   },
-//   appBar: {
-//     zIndex: theme.zIndex.drawer + 1,
-//   },
-//   drawer: {
-//     width: drawerWidth,
-//     flexShrink: 0,
-//   },
-//   drawerPaper: {
-//     width: drawerWidth,
-//   },
-//   drawerContainer: {
-//     overflow: 'auto',
-//   },
-//   content: {
-//     flexGrow: 1,
-//     padding: theme.spacing(3),
-//   },
-// }));
+function Welcome() {
+  return (
+    <div>
+      <h1 className='ViewTitle'> Welcome </h1>
+      <h2> Select the desired application from the left toolbar </h2>
+    </div>
+  );
+}
 
 function App() {
-  // const classes = useStyles();
+  const [currentView, setCurrentView] = useState(<Welcome/>);
+
   return (
-    <div className='App'>
-      {/* <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
+    <div className='App'> 
+      <CssBaseline/>
+      <AppBar position="fixed" className='AppBar'>
         <Toolbar> 
-          <h1> Hola </h1> 
+          <h1> React Alarm Clock </h1> 
         </Toolbar>
       </AppBar>
       <Drawer
-        className={classes.drawer}
+        className='Drawer'
         variant="permanent"
-        classes={{
-          paper: classes.drawerPaper,
-        }}
+        classes={{paper: 'DrawerPaper',}}
       >
-        <Toolbar />
-        <div className={classes.drawerContainer}>
-          <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-        </div>
+        <DrawerContainer setCurrentView={setCurrentView}/>
       </Drawer>
-      <Toolbar /> */}
-      <Alarm/>
+      {currentView}
     </div> 
   );
 }

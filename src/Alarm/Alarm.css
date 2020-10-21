@@ -1,0 +1,15 @@
+.Alarm {
+  /* margin-top: 500px; */
+  margin: auto;
+  /* border: 3px solid red; */
+}
+
+.AlarmTimePicker {
+  width: 70px;
+  display: flex;
+}
+
+.AlarmActivationButton {
+  display: flex;
+  margin: auto;
+}
