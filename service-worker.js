@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-alarm-clock/precache-manifest.f9a50fd9faa77b2101299c4fc295634d.js"
+  "/react-alarm-clock/precache-manifest.64ceb5d4625b858aaa285297ddc4b416.js"
 );
 
 self.addEventListener('message', (event) => {
